@@ -1,0 +1,29 @@
+{
+	"name": "solid-clock",
+	"type": "module",
+	"scripts": {
+		"dev": "vinxi dev",
+		"biome": "biome check --unsafe --write",
+		"build": "vinxi build",
+		"start": "vinxi start"
+	},
+	"dependencies": {
+		"@solidjs/router": "^0.15.0",
+		"@solidjs/start": "^1.1.0",
+		"material-symbols": "^0.37.0",
+		"solid-js": "^1.9.5",
+		"vinxi": "^0.5.7"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.5",
+		"@tailwindcss/vite": "^4.0.7",
+		"daisyui": "^5.1.30",
+		"tailwindcss": "^4.0.7"
+	},
+	"overrides": {
+		"vite": "^6.4.0"
+	},
+	"engines": {
+		"node": ">=22"
+	}
+}
