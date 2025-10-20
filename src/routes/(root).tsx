@@ -8,9 +8,9 @@ export default function (props: ParentProps) {
 	// component layout
 	return (
 		<div id="app" class="grid min-h-dvh">
-			<div class="flex flex-col gap-6">
+			<div class="grid grid-rows-[auto_1fr_auto]">
 				<AppHeader />
-				<main class="grid grow">{props.children}</main>
+				{props.children}
 				<AppFooter />
 			</div>
 		</div>
