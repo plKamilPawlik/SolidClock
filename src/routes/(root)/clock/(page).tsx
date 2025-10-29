@@ -1,4 +1,5 @@
 import { PageView } from "~/components/page-view";
+import { ClockDigital } from "~/fragments/clock-digital";
 import { ClockLocation } from "~/fragments/clock-location";
 
 export default function () {
@@ -6,8 +7,9 @@ export default function () {
 
 	// component layout
 	return (
-		<PageView class="p-6">
+		<PageView class="flex flex-col gap-6 p-6">
 			<ClockLocation />
+			<ClockDigital />
 		</PageView>
 	);
 }
