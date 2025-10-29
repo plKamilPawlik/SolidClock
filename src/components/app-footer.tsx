@@ -9,35 +9,30 @@ export function AppFooter() {
 	return (
 		<footer class="sticky bottom-0 bg-base-100 pb-2">
 			<nav class="dock static text-base-content/50">
-				<AppFooterLink
+				<Link
 					activePath={location.pathname}
 					href="/alarm"
 					label="Alarm"
 					symbol="alarm"
 				/>
-				<AppFooterLink
+				<Link
 					activePath={location.pathname}
 					href="/clock"
 					label="Clock"
 					symbol="schedule"
 				/>
-				<AppFooterLink
+				<Link
 					activePath={location.pathname}
 					href="/stopwatch"
 					label="Stopwatch"
-					symbol="location_on"
+					symbol="timer"
 				/>
 			</nav>
 		</footer>
 	);
 }
 
-export function AppFooterLink(props: {
-	activePath: string;
-	href: string;
-	label: string;
-	symbol: string;
-}) {
+function Link(props: { activePath: string; href: string; label: string; symbol: string }) {
 	// component logic
 	const isActive = () => props.href === props.activePath;
 

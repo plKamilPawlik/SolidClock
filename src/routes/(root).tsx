@@ -7,7 +7,7 @@ export default function (props: ParentProps) {
 
 	// component layout
 	return (
-		<div id="app" class="grid min-h-dvh">
+		<div id="app" class="grid h-dvh overflow-auto">
 			<div class="grid grid-rows-[auto_1fr_auto]">
 				<AppHeader />
 				{props.children}
