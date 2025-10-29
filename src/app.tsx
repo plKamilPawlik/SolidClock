@@ -1,14 +1,20 @@
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
-import { Suspense } from "solid-js";
+import { createEffect, Suspense } from "solid-js";
 
 import "./app.css";
 import { datetime$ } from "./providers/datetime";
+import { geolocation$ } from "./providers/geolocation";
 import { createTimer } from "./providers/hooks/create-timer";
 
 export default function () {
 	// component logic
 	createTimer(() => datetime$.update());
+	createEffect(() => {
+		if (geolocation$.get.coords) {
+			geolocation$.decode(geolocation$.get.coords);
+		}
+	});
 
 	// component layout
 	return (
