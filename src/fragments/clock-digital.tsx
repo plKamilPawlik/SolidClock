@@ -20,7 +20,7 @@ export function ClockDigital() {
 				<span class="font-semibold text-sm">{parseDate()}</span>
 			</p>
 			<p>
-				<span class="font-bold text-6xl">{parseTime()}</span>
+				<span class="font-bold text-7xl">{parseTime()}</span>
 			</p>
 		</div>
 	);

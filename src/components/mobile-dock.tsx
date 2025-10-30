@@ -1,34 +1,27 @@
 import { A, useLocation } from "@solidjs/router";
 import { MaterialSymbol } from "./material-symbol";
 
-export function AppFooter() {
+export function MobileDock() {
 	// component logic
 	const location = useLocation();
 
 	// component layout
 	return (
-		<footer class="sticky bottom-0 bg-base-100 pb-2">
-			<nav class="dock static text-base-content/50">
-				<Link
-					activePath={location.pathname}
-					href="/alarm"
-					label="Alarm"
-					symbol="alarm"
-				/>
-				<Link
-					activePath={location.pathname}
-					href="/clock"
-					label="Clock"
-					symbol="schedule"
-				/>
-				<Link
-					activePath={location.pathname}
-					href="/stopwatch"
-					label="Stopwatch"
-					symbol="timer"
-				/>
-			</nav>
-		</footer>
+		<nav class="dock dock-lg text-base-content/50">
+			<Link activePath={location.pathname} href="/alarm" label="Alarm" symbol="alarm" />
+			<Link
+				activePath={location.pathname}
+				href="/clock"
+				label="Clock"
+				symbol="schedule"
+			/>
+			<Link
+				activePath={location.pathname}
+				href="/stopwatch"
+				label="Stopwatch"
+				symbol="timer"
+			/>
+		</nav>
 	);
 }
 
