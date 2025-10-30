@@ -41,5 +41,5 @@ export interface Ative {
 }
 
 declare global {
-	interface BigDataCloudGeocode extends Response {}
+	type BigDataCloudGeocode = Response;
 }

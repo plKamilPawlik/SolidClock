@@ -6,6 +6,7 @@ import "./app.css";
 import { datetime$ } from "./providers/datetime";
 import { geolocation$ } from "./providers/geolocation";
 import { createTimer } from "./providers/hooks/create-timer";
+import { weather$ } from "./providers/weather";
 
 export default function () {
 	// component logic
@@ -13,6 +14,7 @@ export default function () {
 	createEffect(() => {
 		if (geolocation$.get.coords) {
 			geolocation$.decode(geolocation$.get.coords);
+			weather$.obtain(geolocation$.get.coords);
 		}
 	});
 
