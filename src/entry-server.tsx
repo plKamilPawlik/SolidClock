@@ -13,7 +13,6 @@ export default createHandler(() => (
 
 					<meta charset="utf-8" />
 					<meta name="description" content="Simple clock app build with SolidStart" />
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
 					<meta
 						name="theme-color"
 						content="#FFFFFF"
@@ -23,6 +22,10 @@ export default createHandler(() => (
 						name="theme-color"
 						content="#1d232a"
 						media="(prefers-color-scheme: dark)"
+					/>
+					<meta
+						name="viewport"
+						content="width=device-width, viewport-fit=cover, initial-scale=1"
 					/>
 
 					{assets}
