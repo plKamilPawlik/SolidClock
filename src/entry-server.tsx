@@ -4,7 +4,7 @@ import { createHandler, StartServer } from "@solidjs/start/server";
 export default createHandler(() => (
 	<StartServer
 		document={({ assets, children, scripts }) => (
-			<html lang="en" data-theme="light">
+			<html lang="en">
 				<head>
 					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 					<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />

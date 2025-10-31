@@ -1,5 +1,6 @@
 import { createStore } from "solid-js/store";
 import { reverseGeocode } from "./api/bigdatacloud";
+import { getCurrentPosition } from "./api/geolocation";
 
 export const [get, set] = createStore<{
 	coords?: GeolocationCoordinates;
@@ -8,15 +9,10 @@ export const [get, set] = createStore<{
 
 export const geolocation$ = {
 	get,
-	decode(coords: GeolocationCoordinates): Promise<void> {
-		return reverseGeocode(coords).then((geocode) => set("geocode", geocode));
+	async obtain(): Promise<void> {
+		return getCurrentPosition().then((coords) => set("coords", coords));
 	},
-	refresh(): Promise<void> {
-		return new Promise((resolve, reject) => {
-			navigator.geolocation.getCurrentPosition(({ coords }) => {
-				set("coords", coords);
-				resolve();
-			}, reject);
-		});
+	async decode(coords: GeolocationCoordinates): Promise<void> {
+		return reverseGeocode(coords).then((geocode) => set("geocode", geocode));
 	},
 } as const;

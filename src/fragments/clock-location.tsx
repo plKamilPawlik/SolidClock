@@ -25,7 +25,7 @@ export function ClockLocation() {
 				{geolocation$.get.coords ? (
 					<DisplayCoordinates coords={geolocation$.get.coords} />
 				) : (
-					<ButtonRefresh refresh={geolocation$.refresh} />
+					<ButtonRefresh refresh={geolocation$.obtain} />
 				)}
 			</p>
 		</div>
