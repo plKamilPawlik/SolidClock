@@ -11,10 +11,19 @@ import { weather$ } from "./providers/weather";
 export default function () {
 	// component logic
 	createTimer(() => datetime$.update());
+
+	// auto update geolocation
 	createEffect(() => {
 		if (geolocation$.get.coords) {
 			geolocation$.decode(geolocation$.get.coords);
 			weather$.obtain(geolocation$.get.coords);
+		}
+	});
+
+	// auto update weather
+	createEffect(() => {
+		if (weather$.get.forecast) {
+			weather$.decode(weather$.get.forecast);
 		}
 	});
 
