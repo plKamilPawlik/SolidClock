@@ -15,12 +15,12 @@ export function ClockDigital() {
 
 	// component layout
 	return (
-		<div class="text-center capitalize">
-			<p>
-				<span class="font-semibold text-sm">{parseDate()}</span>
+		<div>
+			<p class="text-center text-sm capitalize">
+				<span class="font-semibold">{parseDate()}</span>
 			</p>
-			<p>
-				<span class="font-bold text-7xl">{parseTime()}</span>
+			<p class="text-center text-7xl capitalize">
+				<span class="font-bold tabular-nums">{parseTime()}</span>
 			</p>
 		</div>
 	);
