@@ -3,6 +3,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vinxi dev",
+		"dev:host": "vinxi dev --host",
 		"biome": "biome check --unsafe --write",
 		"build": "vinxi build",
 		"start": "vinxi start"
